@@ -1,0 +1,60 @@
+/* Ensure the body takes up the full viewport height */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif; /* Optional: Adjust font style */
+}
+
+/* Main content area setup */
+main {
+  display: flex;
+  flex: 1; /* Allow the main section to grow and take up available space */
+  margin-top: 56px; /* Adjust if the header height is different */
+  margin-bottom: 56px; /* Adjust if the footer height is different */
+}
+
+/* Sidebar styling */
+.sidebar {
+  min-width: 250px;
+  height: calc(100vh - 56px); /* Ensure sidebar takes full height minus header/footer */
+  background-color: #f8f9fa; /* Adjust background color as needed */
+}
+
+/* Content area styling */
+.content {
+  flex: 1; /* The content area takes up remaining space */
+  padding: 20px; /* Add padding as needed */
+  overflow-y: auto; /* Ensure content can scroll if it's too long */
+}
+
+/* Header styling */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensure header is above other content */
+  background-color: #fff; /* Adjust background color as needed */
+  height: 56px; /* Adjust according to your header height */
+}
+
+/* Footer styling */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff; /* Adjust background color as needed */
+  height: 56px; /* Adjust according to your footer height */
+}
+.dropdown-toggle:hover{
+  background-color:#000000;
+}
+.dropdown-item:hover{
+  background-color:aqua;
+}
